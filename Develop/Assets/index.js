@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown');
 const questions = [
 
     {
@@ -21,7 +21,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide examples how the application is used'        
+        message: 'How the application will be used'        
     },
     {
         type: 'list',
@@ -64,14 +64,8 @@ const questions = [
         type: 'input',
         name: 'githubUsername',
         message: 'What is your GitHub Username? (Required)',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address? (Required)',
-    },
-
-
+    }, 
+    
 ];
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
