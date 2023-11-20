@@ -87,7 +87,6 @@ const questions = [
   },
 ];
 
-
 inquirer.prompt(questions).then((answers) => {
 
   const readmeContent = generateREADME(answers);
@@ -96,3 +95,5 @@ inquirer.prompt(questions).then((answers) => {
 
   console.log('README.md successfully generated!');
 });
+
+init();
